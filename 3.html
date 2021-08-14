@@ -3,55 +3,42 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<h1><a href="index.html">WEB</a></h1>
-    <!-- 코드 리팩토링 중복제거 이전
-  <input id="night_day" type="button" value="night" onclick="
-    if(document.querySelector('#night_day').value === 'night'){
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('body').style.color = 'white';
-      document.querySelector('#night_day').value = 'day';
-    } else {
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = 'black';
-      document.querySelector('#night_day').value = 'night';
-    }
-  ">
-    -->
-    <!-- 코드 리팩토링 중복제거_변수 사용해 공통부분 최대한 제거-->
-    <input type="button" value="night" onclick="
+<link rel="stylesheet" href="style.css">
+<script>
+  function nightDayHandler(self){
     var target = document.querySelector('body');
-    if(this.value === 'night'){
+    if(self.value === 'night'){
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
-      this.value = 'day';
-                                                
+      self.value = 'day';
+
       var alist = document.querySelectorAll('a');
       var i = 0;
-      while(i<alist.length){
-        alist[i].style.color = 'powderblue';
-        i = i + 1;
-     }                                          
-                                                
-                                                
+	<h1><a href="index.html">WEB</a></h1>
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
-      this.value = 'night';
-      
+      self.value = 'night';
+
       var alist = document.querySelectorAll('a');
       var i = 0;
-      while(i<alist.length){
-        alist[i].style.color = 'blue';
+	<h1><a href="index.html">WEB</a></h1>
         i = i + 1;
-     }  
-                                                
+      }
     }
-                                                
-  ">    
+  }
+  </script>
     
+</head>
+<body>
+    
+<h1><a href="index.html">WEB</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
     
 <div id="grid">
   <ol>
