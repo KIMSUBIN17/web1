@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="uft-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+        var coworkes={
+            "programmer" : "egoing",
+            "designer" : "leezche"
+            
+        };
+
+        document.write("programmer : " +coworkes.programmer+"<br>");
+        document.write("designer : " +coworkes.designer+"<br>");
+        coworkes.bookkeeper = "duru";
+        document.write("bookkeeper : " +coworkes.bookkeeper+"<br>"); coworkes["data scientist"] = "taeho";
+        document.write
+        ("data scientist : " +coworkes["data scientist"]+"<br>");   
+            
+        </script>
+        
+        <h2>Iterate</h2>
+        <script>
+            for(var key in coworkes){
+            //document.write(key+'<br>');
+            //document.write(coworkes[key]+'<br>');  //순서보장안함
+            document.write(key+' : '+coworkes[key]+'<br>');
+            }
+        </script>
+        
+        <h2>Property & Method</h2>
+        <script>
+            coworkes.showAll = function(){
+            for(var key in this){
+                document.write(key+' : '+coworkes[key]+'<br>');
+            }            
+        }
+            coworkes.showAll();
+
+        </script>
+        
+    </body>
+</html>
